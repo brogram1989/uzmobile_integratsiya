@@ -12,7 +12,7 @@ menu_router = Router()
 async def help_command(message: Message):
     await message.answer("This is the help desk. Choose an option:"
                          "\n/start - bot ishini boshlash"
-                        "\n/about - xaqida"
+                        "\n/help "
                          "\n\n⌨️💻bu bot Uzmobile filiali, TRD, Integratsiya otdeli boti"
                          "\ncontacts:"
                          "\ntelegram: t.me/Gafurov_Dilshod"
