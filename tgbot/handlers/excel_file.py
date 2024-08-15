@@ -182,8 +182,8 @@ async def handle_btsid_button(query: CallbackQuery):
         region = selected_row["Region"]
         comment = selected_row["Примечание"]
         # # Location for the 📍 icon
-        # long = selected_row['Longitude']
-        # lat = selected_row['Latitude']
+        long = selected_row['Longitude']
+        lat = selected_row['Latitude']
         # url = f"http://maps.google.com/maps?q={lat},{long}"
 
         info_about_bs = f"""
@@ -191,7 +191,7 @@ Tanlangan BTS bo'yicha ma'lumotlar: \n
 1. <b>🆔:</b>  {bts_id}
 2. <b>Nomi:</b>  {bts_name}
 3. <b>📶online/offline:</b>  {bts_status}
-4. <b>BTS turi:</b>   {bts_type}
+4. <b>Konfiguratsiya raqami:</b>   {bts_type}
 5. <b>📂mavjud texnologiya:</b>   {curent_tec}
 6. <b>🗂modernizatsiyadan keyingi texnologiya:</b>  {moder_tec}
 7. <b>🗺region:</b>   {region}
@@ -203,7 +203,7 @@ Tanlangan BTS bo'yicha ma'lumotlar: \n
 13. <b>📆 zapusk boshlandi ⚙️📶:</b>   {launch_ongoing}
 14. <b>📆 zapusk bo'ldi ✅📶:</b>  {launch}
 15. <b> obekt bo'yicha izoh :</b>  {comment}
-<a href="http://maps.google.com/maps?q=">📍lokatsiya</a>
+<a href=f"http://maps.google.com/maps?q={lat},{long}">📍lokatsiya</a>
 
   """
         bs_keyboard = InlineKeyboardBuilder()
